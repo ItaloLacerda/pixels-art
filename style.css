@@ -16,14 +16,14 @@
 }
 
 #pixel-board{
-    width: 600px;
-    height: 600px;
+    width: 210px;
+    height: 210px;
 }
 .pixel {
     border: 1px solid black;
     margin-bottom: -4px;
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     background-color: white;
 

@@ -7,9 +7,10 @@ window.onload = function() {
         squareMaker('div', colorPaletter, 'color');
 
     }
-
+    //atribui cores a paleta
     paletteColor(colorPaletter)
 
+    //cria quadro com 25 pixels de cor branca
     for (let counter = 0; counter < 25; counter += 1) {
         squareMaker('div', pixelBoard, 'pixel');
 
