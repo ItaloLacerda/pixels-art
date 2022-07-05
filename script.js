@@ -1,5 +1,6 @@
 window.onload = function() {
     let colorPaletter = document.getElementById('color-palette');
+    let pixelBoard = document.getElementById('pixel-board');
 
     //criando 4 divs como filhos do elemento colorPaletter com a classe color
     for (let counter = 0; counter < 4; counter += 1) {
@@ -8,6 +9,11 @@ window.onload = function() {
     }
 
     paletteColor(colorPaletter)
+
+    for (let counter = 0; counter < 25; counter += 1) {
+        squareMaker('div', pixelBoard, 'pixel');
+
+    }
  
 };
 //Cria um elemento e atribui ao pai adicionando uma classe caso necessario
