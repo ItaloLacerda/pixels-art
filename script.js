@@ -10,6 +10,10 @@ window.onload = function() {
     //atribui cores a paleta
     paletteColor(colorPaletter)
 
+    //atribui a classe "selected" ao primeiro filho de colorPaletter
+    let classDiv0 = colorPaletter.children[0].classList;
+    classDiv0.add('selected')
+
     //cria quadro com 25 pixels de cor branca
     for (let counter = 0; counter < 25; counter += 1) {
         squareMaker('div', pixelBoard, 'pixel');
