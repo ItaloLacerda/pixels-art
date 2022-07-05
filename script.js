@@ -29,6 +29,36 @@ window.onload = function() {
         squareMaker('div', pixelBoard, 'pixel');
 
     }
+
+    let squarePixel = document.getElementsByClassName('pixel');
+
+    squarePixel[0].addEventListener('click', addColor)
+    squarePixel[1].addEventListener('click', addColor)
+    squarePixel[2].addEventListener('click', addColor)
+    squarePixel[3].addEventListener('click', addColor)
+    squarePixel[4].addEventListener('click', addColor)
+    squarePixel[5].addEventListener('click', addColor)
+    squarePixel[6].addEventListener('click', addColor)
+    squarePixel[7].addEventListener('click', addColor)
+    squarePixel[8].addEventListener('click', addColor)
+    squarePixel[9].addEventListener('click', addColor)
+    squarePixel[10].addEventListener('click', addColor)
+    squarePixel[11].addEventListener('click', addColor)
+    squarePixel[12].addEventListener('click', addColor)
+    squarePixel[13].addEventListener('click', addColor)
+    squarePixel[14].addEventListener('click', addColor)
+    squarePixel[15].addEventListener('click', addColor)
+    squarePixel[16].addEventListener('click', addColor)
+    squarePixel[17].addEventListener('click', addColor)
+    squarePixel[18].addEventListener('click', addColor)
+    squarePixel[19].addEventListener('click', addColor)
+    squarePixel[20].addEventListener('click', addColor)
+    squarePixel[21].addEventListener('click', addColor)
+    squarePixel[22].addEventListener('click', addColor)
+    squarePixel[23].addEventListener('click', addColor)
+    squarePixel[24].addEventListener('click', addColor)
+    
+
 };
 
 //Cria um elemento e atribui ao pai adicionando uma classe caso necessario
@@ -56,5 +86,11 @@ function addClass (event) {
     }
     
     event.target.className = 'color selected';   
+}
+
+function addColor(event) {
+    let selectedSquare = document.getElementsByClassName('selected')
+    
+    event.target.style.backgroundColor = selectedSquare[0].style.backgroundColor;
 }
 
