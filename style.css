@@ -1,0 +1,13 @@
+#color-paletter{
+    width: 500px;
+    height: 150px;
+    
+}
+
+.color {
+    border: 1px solid black;
+    margin-left: 5px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
