@@ -1,8 +1,9 @@
 window.onload = function() {
     let colorPaletter = document.getElementById('color-palette');
     let pixelBoard = document.getElementById('pixel-board');
-    let button = document.getElementById('clear-board');
-
+    let clearBoard = document.getElementById('clear-board');
+    let generateBoard = document.getElementById('generate-board');
+    
     //criando 4 divs como filhos do elemento colorPaletter com a classe color
     for (let counter = 0; counter < 4; counter += 1) {
         squareMaker('div', colorPaletter, 'color');
@@ -62,12 +63,16 @@ window.onload = function() {
     squarePixel[24].addEventListener('click', addColor)
 
     //Atribui texto "limpar" ao Button
-    button.innerText = 'Limpar'
+    clearBoard.innerText = 'Limpar'
 
     //Limpar SquarePixel
-    button.addEventListener('click', clean)
+    clearBoard.addEventListener('click', clean)
     
+    //Atribui Texto "VQV" ao generate-board
 
+    generateBoard.innerText = 'VQV'
+
+    generateBoard.addEventListener('click', inputPixel)
 };
 
 //Cria um elemento e atribui ao pai adicionando uma classe caso necessario
@@ -111,3 +116,19 @@ function clean() {
         squares.style.backgroundColor = 'white'
     }
 }
+
+function inputPixel() {
+    let pixelBoard = document.getElementById('pixel-board');
+    let input = document.getElementById('board-size');
+    let inputs = input.value * input.value;
+
+   pixelBoard.innerText = '';
+
+   if (input.value < 1) {
+     alert('Board inválido!')
+   }
+   
+    for (let counter = 0; counter < inputs ; counter += 1) {
+        squareMaker('div', pixelBoard, 'pixel');
+    }
+};
