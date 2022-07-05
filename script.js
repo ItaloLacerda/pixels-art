@@ -1,6 +1,7 @@
 window.onload = function() {
     let colorPaletter = document.getElementById('color-palette');
     let pixelBoard = document.getElementById('pixel-board');
+    let button = document.getElementById('clear-board');
 
     //criando 4 divs como filhos do elemento colorPaletter com a classe color
     for (let counter = 0; counter < 4; counter += 1) {
@@ -30,8 +31,10 @@ window.onload = function() {
 
     }
 
+    //Captura elementos com classe pixel
     let squarePixel = document.getElementsByClassName('pixel');
 
+    //evento de click atribui cor a pixel
     squarePixel[0].addEventListener('click', addColor)
     squarePixel[1].addEventListener('click', addColor)
     squarePixel[2].addEventListener('click', addColor)
@@ -57,6 +60,12 @@ window.onload = function() {
     squarePixel[22].addEventListener('click', addColor)
     squarePixel[23].addEventListener('click', addColor)
     squarePixel[24].addEventListener('click', addColor)
+
+    //Atribui texto "limpar" ao Button
+    button.innerText = 'Limpar'
+
+    //Limpar SquarePixel
+    button.addEventListener('click', clean)
     
 
 };
@@ -88,9 +97,17 @@ function addClass (event) {
     event.target.className = 'color selected';   
 }
 
+//atribui cor de fundo ao elemento clicado
 function addColor(event) {
     let selectedSquare = document.getElementsByClassName('selected')
     
     event.target.style.backgroundColor = selectedSquare[0].style.backgroundColor;
 }
 
+function clean() {
+    let square = document.getElementsByClassName('pixel');
+
+    for (let squares of square) {
+        squares.style.backgroundColor = 'white'
+    }
+}
