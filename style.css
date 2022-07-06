@@ -1,5 +1,7 @@
 * {
     margin: 0;
+    margin-top: 5px;
+    text-align: center;
 }
 #color-paletter{
     width: 500px;
@@ -18,10 +20,12 @@
 #pixel-board{
     width: 210px;
     height: 210px;
+    position: relative;
+    left: 45%;
 }
 .pixel {
     border: 1px solid black;
-    margin-bottom: -4px;
+    margin-bottom: -9px;
     width: 40px;
     height: 40px;
     display: inline-block;
